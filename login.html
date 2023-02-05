@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Top news</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
 </head>
+
 <body>
-    
+    <div class="main">
+        <div class="logo">
+            <img src="./assets/images/Top news.png" alt="">
+        </div>
+        <div class="content">
+            <!-- 登录模块 -->
+            <div class="login">
+                <div class="header">
+                    <img src="./assets/images/login_title.png" alt="">
+                </div>
+                <form class="login-msg layui-form" action="" id="form-login">
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-username"></i>
+                        <input type="text" name="username" lay-verify="required|phone" autocomplete="off" placeholder="手机号或邮箱"
+                            class="layui-input">
+                    </div>
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-password"></i>
+                        <input type="password" name="password" lay-verify="required|pwd" autocomplete="off"
+                            placeholder="密码" class="layui-input">
+                    </div>
+                    <div class="layui-form-item">
+                        <button type="submit" class="layui-btn layui-btn-fluid" lay-submit="">登录</button>
+                    </div>
+                    <div class="layui-form-item server">
+                        <a href="Javascript:;">忘记密码</a>
+                        <a href="Javascript:;" id="link_reg">注册账号</a>
+                    </div>
+                </form>
+            </div>
+            <!-- 注册模块 -->
+            <div class="register" style="display:none;">
+                <div class="header">
+                    <img src="./assets/images/login_title.png" alt="">
+                </div>
+                <form class="login-msg layui-form" action="" id="form-reg">
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-username"></i>
+                        <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="手机号或邮箱"
+                            class="layui-input">
+                    </div>
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-password"></i>
+                        <input type="password" name="password" lay-verify="required|pwd" autocomplete="off" placeholder="密码"
+                            class="layui-input">
+                    </div>
+                    <div class="layui-form-item">
+                        <i class="layui-icon layui-icon-password"></i>
+                        <input type="password" name="repassword" lay-verify="required|repwd" autocomplete="off"
+                            placeholder="再次输入密码" class="layui-input">
+                    </div>
+                    <div class="layui-form-item">
+                        <button type="submit" class="layui-btn layui-btn-fluid" lay-submit="">注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./assets/js/baseAPI.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
-</html>
+
+</html
